@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.module-selector {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#solver-words div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#solver-words div p {
+    background-color: #555;
+    border-radius: 10px;
+    font-size: 24pt;
+    margin-bottom: 20px;
+}
+
+#module-grid {
+    display: grid;
+    width: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.module {
+    background-color: #7c7c7c;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.module img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.solver img {
+    width: 100%;
+}
+
+#solver-series .table-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#red-wire-table thead {
+    background-color: #a03737;
+    color: white;
+}
+
+#blue-wire-table thead {
+    background-color: #3f2bd5;
+    color: white;
+}
+
+#black-wire-table thead {
+    background-color: #5a5a5a;
+    color: white;
+}
+
+#solver-series .table-container table{
+    background-color: #343434;
+}
+
+.module.selected {
+    background-color: #28a745;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#solver-container {
+    /* width: 100%; */
+    width: 50vw;
+    margin: 20px auto;
+}
+
+#solver-morse {
+    /* display: grid; */
+    align-items: center;
+    justify-content: center;
+}
+
+.solver {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.input-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    color: white;
+    text-align: left;
+}
+
+.input-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.input-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.input-form input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.input-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-form button:hover {
+    background-color: #218838;
+}
+
+.solver input {
+    width: 10%; /* Slightly smaller than the form inputs */
+    margin: 10px auto;
+    display: block;
+}
+
+#wire-count {
+    width: 80%;
+    margin: 10px auto;
+}
+
+#wire-count-display {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* CSS for the green-tinted color */
+.clicked {
+    background-color: #00ff2a84 !important; /* Green-tinted background */
+}
+
+button {
+    cursor: pointer;
+}
+
+#solver-series .button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#black-wire-table-button {
+    background-color: #555;
+}
+
+#blue-wire-table-button {
+    background-color: #3f2bd5;
+}
+
+#red-wire-table-button {
+    background-color: #a03737;
+}
+
+#solver-series button {
+    width: 1fr;
+}
+
+  

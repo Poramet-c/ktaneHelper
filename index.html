@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTANE Module Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="module-selector">
+            <h1>Select Modules</h1>
+            <div id="module-grid"></div> 
+            <button id="confirm-selection">Start</button>
+        </div>
+        
+        
+        <div id="solver-container">
+            <div id="solver-wires" class="solver">
+                <h3>เรื่องของสายไฟ</h3>
+                <!-- <p>Cut the correct wire based on the manual.</p> -->
+<!--                 
+                <label for="wire-count">How many wires are there?</label>
+                <input type="range" id="wire-count" min="3" max="6" value="3" step="1">
+                <p>Selected: <span id="wire-count-display">3</span> wires</p>
+            
+                <button id="submit-wire-count">Submit</button> -->
+                <img src="imgs/wires.png" alt="">
+            </div>
+            
+            <div id="solver-button" class="solver">
+                <h3>เรื่องของปุ่มใหญ่</h3>
+                <img src="imgs/buttons.png" alt="">
+            </div>
+            <div id="solver-symbol" class="solver">
+                <h3>เรื่องของสัญลักษณ์</h3>
+                <img src="imgs/symbols.png" alt="">
+            </div>
+            <div id="solver-simon" class="solver">
+                <h3>เรื่องของ Simon Says</h3>
+                <img src="imgs/simons.png" alt="">
+            </div>
+            <div id="solver-password" class="solver">
+                <h3>เรื่องของรหัสผ่าน</h3>
+                <div>
+                    <p>กระทะ</p>
+                
+                    <p>งงงวย</p>
+                    
+                    <p>ชนคาน<br> ชมเชย</p>
+                    
+                    <p>ตนเอง <br> ตากลม <br>ตามมา <br>ตาลาย</p>
+                    
+                    <p>ทนทาน<br> ทบทวน</p>
+                    
+                    <p>ธรรมะ</p>
+                    
+                    <p>บรรจง</p>
+                    
+                    <p>ประถม<br> ปากใบ</p>
+                    
+                    <p>ผลงาน</p>
+                    
+                    <p>รบกวน<br> ระนาด<br> ระบาด<br> ระบาย</p>
+                    
+                    <p>ลงนาม<br> ละลาย<br> ละออง<br> ลาออก</p>
+                    
+                    <p>วรรณะ</p>
+                    
+                    <p>สายตา<br> สายไฟ</p>
+                    
+                    <p>องอาจ<br> อวกาศ<br> อวสาน<br> อากาศ<br> อาคาร</p>
+                    
+                    <p>เออออ</p>
+                    
+                    <p>แหกตา</p>
+                    
+                    <p>โอกาส</p>
+                    
+                    <p>ไฟแรง</p>
+                </div>
+            </div>
+            <div id="solver-memory" class="solver">
+                <h3>เรื่องของความจำ</h3>
+                <img src="imgs/memory.png" alt="">
+            </div>
+            <div id="solver-morse" class="solver">
+                <h3>เรื่องของรหัสมอร์ส</h3>
+                <!-- <img src="imgs/morse.png" alt="">
+                  -->
+                  <table border='1'>
+                    <thead>
+                      <tr>
+                        <th>คำที่ถูกส่งมาคือ:</th>
+                        <th>ตอบที่ความถี่:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>dntri</td><td>3.592 MHz</td></tr>
+                      <tr><td>ecvaca</td><td>3.532 MHz</td></tr>
+                      <tr><td>egahli</td><td>3.582 MHz</td></tr>
+                      <tr><td>emsayn</td><td>3.542 MHz</td></tr>
+                      <tr><td>gdhmay</td><td>3.575 MHz</td></tr>
+                      <tr><td>hnavta</td><td>3.572 MHz</td></tr>
+                      <tr><td>knvay</td><td>3.515 MHz</td></tr>
+                      <tr><td>mayagl</td><td>3.535 MHz</td></tr>
+                      <tr><td>obran</td><td>3.505 MHz</td></tr>
+                      <tr><td>oxkdi</td><td>3.552 MHz</td></tr>
+                      <tr><td>pagga</td><td>3.545 MHz</td></tr>
+                      <tr><td>qlrwm</td><td>3.522 MHz</td></tr>
+                      <tr><td>sgprg</td><td>3.555 MHz</td></tr>
+                      <tr><td>sifva</td><td>3.595 MHz</td></tr>
+                      <tr><td>tikwam</td><td>3.565 MHz</td></tr>
+                      <tr><td>xawswn</td><td>3.600 MHz</td></tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+            <div id="solver-complex" class="solver">
+                <h3>เรื่องของสายไฟซับซ้อน</h3>
+                <img src="imgs/complex.png" alt="">
+            </div>
+            <div id="solver-series" class="solver">
+                <h3>เรื่องของสายไฟอนุกรม</h3>
+
+                <div class="button-container">
+                    <button onclick="colorNextRow('red-wire-table');" id="red-wire-table-button">RED</button>
+                    <button onclick="colorNextRow('blue-wire-table');" id="blue-wire-table-button">BLUE</button>
+                    <button onclick="colorNextRow('black-wire-table');" id="black-wire-table-button">BLACK</button>
+                </div>
+
+                <!-- <button onclick="resetTableRows();">RESET</button> -->
+
+                <div class="table-container">
+                    <table id="red-wire-table" border='1'>
+                        <thead>
+                          <tr>
+                            <th>ลำดับการปรากฏขึ้นของสายไฟ</th>
+                            <th>ตัดสายไฟเส้นนี้หากต่อกับ:</th>
+                            <!-- <th><button onclick="colorNextRow('red-wire-table')">Color Next Row</button></th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>สายไฟสีแดงเส้นแรก</td>
+                                <td>C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่สอง</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่สาม</td>
+                                <td>A</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่สี่</td>
+                                <td>A หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่ห้า</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่หก</td>
+                                <td>A หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่เจ็ด</td>
+                                <td>A, B หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่แปด</td>
+                                <td>A หรือ B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีแดงเส้นที่เก้า</td>
+                                <td>B</td>
+                              </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table id="blue-wire-table" border='1'>
+                        <thead>
+                          <tr>
+                            <th>ลำดับการปรากฏขึ้นของสายไฟ</th>
+                            <th>ตัดสายไฟเส้นนี้หากต่อกับ:</th>
+                            <!-- <th><button onclick="colorNextRow('blue-wire-table')">Color Next Row</button></th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>สายไฟสีน้ำเงินเส้นแรก</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่สอง</td>
+                                <td>A หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่สาม</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่สี่</td>
+                                <td>A</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่ห้า</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่หก</td>
+                                <td>B หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่เจ็ด</td>
+                                <td>C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่แปด</td>
+                                <td>A หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีน้ำเงินเส้นที่เก้า</td>
+                                <td>A</td>
+                              </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table id="black-wire-table" border='1'>
+                        <thead>
+                          <tr>
+                            <th>ลำดับการปรากฏขึ้นของสายไฟ</th>
+                            <th>ตัดสายไฟเส้นนี้หากต่อกับ:</th>
+                            <!-- <th></th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>สายไฟสีดำเส้นแรก</td>
+                                <td>A, B หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่สอง</td>
+                                <td>A หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่สาม</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่สี่</td>
+                                <td>A หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่ห้า</td>
+                                <td>B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่หก</td>
+                                <td>B หรือ C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่เจ็ด</td>
+                                <td>A หรือ B</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่แปด</td>
+                                <td>C</td>
+                              </tr>
+                              <tr>
+                                <td>สายไฟสีดำเส้นที่เก้า</td>
+                                <td>C</td>
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button onclick="resetTableRows();">RESET</button>
+            </div>
+            <div id="solver-maze" class="solver">
+                <h3>เรื่องของเขาวงกต</h3>
+                <img src="imgs/maze.png" alt="">
+            </div>
+            <div id="solver-words" class="solver">
+                <h3>เรื่องของคำกำกวม</h3>
+                <img src="imgs/words1.png" alt="">
+                <img src="imgs/words2.png" alt="">
+            </div>
+            <div id="solver-rotate" class="solver">
+                <h3>เรื่องของลูกบิด</h3>
+                <table border='1'>
+                    <tr>
+                      <td>5</td>
+                      <td>ซ้าย</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>ซ้าย</td>
+                    </tr>
+                    <tr>
+                      <td>1,3</td>
+                      <td>ขวา</td>
+                    </tr>
+                    <tr>
+                      <td>1,3,5</td>
+                      <td>ขวา</td>
+                    </tr>
+                    <tr>
+                      <td>2,3,6</td>
+                      <td>ล่าง</td>
+                    </tr>
+                    <tr>
+                      <td>3,5</td>
+                      <td>บน</td>
+                    </tr>
+                    <tr>
+                      <td>3,6</td>
+                      <td>บน</td>
+                    </tr>
+                    <tr>
+                      <td>none</td>
+                      <td>ล่าง</td>
+                    </tr>
+                  </table>                  
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
